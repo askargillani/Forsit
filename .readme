@@ -1,18 +1,24 @@
+------------------------
 How to Setup
+------------------------
 Install Python 3 and pip if not already installed.
 Install required dependencies: pip install sqlalchemy pip install your-database-driver # e.g., psycopg2 for PostgreSQL, pymysql for MySQL, or sqlite3 for SQLite
 Clone or download this repository to your local machine.
 Set up your database and update the database connection string in your configuration.
 Ensure your SQLAlchemy models are created and migrated to the database.
 Start your application or run your scripts as needed.
+------------------------
 Dependencies
+------------------------
 Python 3.x
 SQLAlchemy
 Database driver (e.g., psycopg2, pymysql, sqlite3)
 Repository Class and API Endpoints
 The Repository class provides methods for managing products, inventory, and sales data using SQLAlchemy ORM. These methods are typically exposed as API endpoints in your application.
 
+------------------------
 Endpoints:
+------------------------
 
 /revenue/period [GET]
 Returns the total revenue between two dates.
