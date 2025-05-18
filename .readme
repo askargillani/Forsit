@@ -1,0 +1,43 @@
+How to Setup
+Install Python 3 and pip if not already installed.
+Install required dependencies: pip install sqlalchemy pip install your-database-driver # e.g., psycopg2 for PostgreSQL, pymysql for MySQL, or sqlite3 for SQLite
+Clone or download this repository to your local machine.
+Set up your database and update the database connection string in your configuration.
+Ensure your SQLAlchemy models are created and migrated to the database.
+Start your application or run your scripts as needed.
+Dependencies
+Python 3.x
+SQLAlchemy
+Database driver (e.g., psycopg2, pymysql, sqlite3)
+Repository Class and API Endpoints
+The Repository class provides methods for managing products, inventory, and sales data using SQLAlchemy ORM. These methods are typically exposed as API endpoints in your application.
+
+Endpoints:
+
+/revenue/period [GET]
+Returns the total revenue between two dates.
+
+/products/top [GET]
+Returns the top 5 products sold in the given period, sorted by quantity.
+
+/revenue/category [GET]
+Returns revenue grouped by product category, optionally filtered by date range.
+
+/inventory/history [GET]
+Returns the inventory change history for a product, optionally filtered by date range.
+
+/inventory/update [POST]
+Updates the inventory for a product by the specified quantity change and logs the change in history.
+
+/inventory [GET]
+Returns the current inventory for a product. If product_name is not provided, returns all inventory.
+
+/inventory/low_stock [GET]
+Returns a list of products where the inventory quantity is below the given threshold.
+
+/product/add [POST]
+Adds a new product with the specified details and initial inventory.
+Returns an error if the product already exists or the category is not found.
+
+/product/delete [DELETE]
+Deletes a product and its inventory from the database.
