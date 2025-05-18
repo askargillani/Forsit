@@ -6,7 +6,7 @@ Install required dependencies: pip install sqlalchemy pip install your-database-
 Clone or download this repository to your local machine.
 Set up your database and update the database connection string in your configuration.
 Ensure your SQLAlchemy models are created and migrated to the database.
-Start your application or run your scripts as needed.
+Start your application or run your scripts as needed or use database-script.py.
 ------------------------
 Dependencies
 ------------------------
